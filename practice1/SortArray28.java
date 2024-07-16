@@ -5,6 +5,8 @@ class SortArray28 {
   // Method to sort the array
   static void sort3(float[] a) {
     Arrays.sort(a);
+        System.out.println(Arrays.toString(a));
+
   }
   
   public static void main(String[] args) {
@@ -14,6 +16,5 @@ class SortArray28 {
     sort3(a);
     
     // Print the sorted array
-    System.out.println(Arrays.toString(a));
   }
 }
