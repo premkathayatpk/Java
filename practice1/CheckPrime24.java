@@ -1,30 +1,24 @@
 
 public class CheckPrime24 {
-    public static int isPrime(int n){
-        int flag=0;
-        if(n<=1)
-            flag =0;
-    
-        for(int i=2;i<n;i++){
-            if(n%i==0){
-                flag=0;
-                break;
-                
+            public static boolean isPrime(int n) {
+                if (n <= 1)
+                    return false;
+
+                for (int i = 2; i <n; i++) {
+                    if (n % i == 0) {
+                        return false;
+                    }
+                }
+
+                return true;
             }
-        
-            else{
-                flag=1;
+
+            public static void main(String[] args) {
+                int number = 5;
+                if (isPrime(number)) {
+                    System.out.println(number + " is a prime number.");
+                } else {
+                    System.out.println(number + " is not a prime number.");
+                }
             }
-    }
-        
-     if(flag==1){
-         return 1;
-     }
-     else{
-         return 1;
-     }
-    }
-    public static void main(String[] args) {
-        System.out.println( isPrime(8));
-    }
-}
+        }
