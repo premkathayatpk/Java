@@ -1,20 +1,22 @@
+import java.util.Arrays;
 public class MissingNum {
     public static int missNum(int n,int[] arr){
         int[] a=new int[n+1];
-        for(int i=0;i<n-1;i++){
-            a[arr[i]]++;
-    }
+        Arrays.fill(a,-1);
+        for(int i=0;i<n;i++){
+            a[arr[i]]=arr[i];
+        }
         for(int i=1;i<=n;i++) {
-            if (a[i] == 0) {
+            if (a[i] == -1) {
                 return i;
             }
         }
-            return -1;
+        return 0;
         }
         public static void main(String[] args)
         {
-            int[] arr = { 1, 2, 3,5,4 };
-            int n = 6;
+            int[] arr = {0,2};
+            int n = arr.length;
             System.out.println(missNum(n,arr));
 
         }
