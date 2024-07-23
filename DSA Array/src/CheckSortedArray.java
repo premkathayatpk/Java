@@ -9,11 +9,33 @@ public class CheckSortedArray {
         for(int i=0;i<n;i++){
             arr[i]=scan.nextInt();
         }
-        checkSorted(arr);
+        boolean isInc=isIncreasing(arr);
+        boolean isDec= isDecreasing(arr);
+        if(isInc || isDec){
+            System.out.println("Sorted array");
+        }
+        else{
+            System.out.println("Not sorted array. ");
+        }
+    }
+    static boolean isIncreasing(int[] arr){
+        int i=1;
+        while(i<arr.length){
+            if(arr[i]<arr[i-1]){
+                return false;
+            }
+            i++;
+        }
+        return  true;
     }
 
-    static boolean checkSorted(int[] arr){
-
+    static boolean isDecreasing(int[] arr){
+        int i=1;
+        while( i<arr.length){
+            if(arr[i]>arr[i-1])
+                return  false;
+            i++;
+        }
         return  true;
     }
 }
