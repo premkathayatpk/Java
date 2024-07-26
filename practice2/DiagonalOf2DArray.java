@@ -21,9 +21,10 @@ public class DiagonalOf2DArray {
         }
         System.out.println("Diagonal of array is ");
         for(int i=0;i<r;i++){
-            for(int j=0;j<r;j++){
-                if(arr[i]==arr[j])
-                System.out.println(arr[i][j]);
+            for(int j=0;j<r;j++) {
+                if (arr[i] == arr[j]) {
+                    System.out.println(arr[i][j]);
+                }
             }
 
         }
